@@ -1,0 +1,19 @@
+#summary Installation for Mac OSX
+
+= Introduction =
+
+Instructions how to install the needed libraries and test DRControl utility to control Denkovi USB Relay board.
+
+= Tested on =
+
+  * Mac OSX 10.8+
+  * [http://denkovi.com/product/44/usb-four-4-relay-output-module-board-for-home-automation.html Denkovi 4 USB Relay Board]
+
+= Python Libraries =
+
+There are two libraries that are needed to interface the relay board.
+
+  * Python-FTDI 
+  * PyLibFTDI
+
+= Install =
