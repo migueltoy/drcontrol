@@ -1,0 +1,9 @@
+#Installation for Raspberry Pi and like
+
+= Introduction =
+
+Instructions how to install the needed libraries and test DRControl utility to control Denkovi Relay board.
+
+= Details =
+
+Soon...
