@@ -18,28 +18,36 @@ There are two libraries that are needed to interface the relay board.
 
 = Install =
 
-<pre>
+Install Python-FTDI library
+
+{{{
 # apt-get install python-ftdi
-</pre>
+}}}
 
-Use PIP to install the pylibftdi
+Install the FTDI wrapper PyLibFTDI usinf PIP.
 
-<pre>
+{{{
 # pip install pylibftdi
-</pre>
+}}}
+
+If you don't have PIP installed you can install it easily by following command
+
+{{{
+# apt-get install python-pip
+}}}
 
 = Test =
 
 If you have the relay board connected, then you can run a quick test by entering following command
 
-<pre>
+{{{
 # python -m pylibftdi.examples.list_devices
-</pre>
+}}}
 
 Example printout
 
-<pre>
+{{{
 root@raspberrypi:~# python -m pylibftdi.examples.list_devices
 FTDI:FT245R USB FIFO:A6VV5PHY
 root@raspberrypi:~# 
-</pre>
+}}}
