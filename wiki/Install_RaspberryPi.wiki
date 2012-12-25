@@ -1,9 +1,10 @@
-#Installation for Raspberry Pi and like
+#summary Installation for Raspberry Pi and like
 
 = Introduction =
 
 Instructions how to install the needed libraries and test DRControl utility to control Denkovi Relay board.
 
-= Details =
+= Tested on =
 
-Soon...
+* [http://www.raspberrypi.org/downloads Raspberry Pi with Raspbian 3.2.27+]
+* [http://denkovi.com/product/44/usb-four-4-relay-output-module-board-for-home-automation.html Denkovi 4 USB Relay Board]
