@@ -51,3 +51,5 @@ root@raspberrypi:~# python -m pylibftdi.examples.list_devices
 FTDI:FT245R USB FIFO:A6VV5PHY
 root@raspberrypi:~# 
 }}}
+
+Note that this command will list all FTDI devices, so if you have more of them, then it will be listed as well.
