@@ -33,6 +33,23 @@ To install the pylibftdi the PIP is used.
 # sudo pip install pylibftdi
 }}}
 
+= Test= 
+
+To test that the python software is properly installed following command should give you a printout.
+
+{{{
+# python -m pylibftdi.examples.list_devices
+}}}
+
+It should list all FTDI devices you have on the system.
+
+Example;
+{{{
+$ python -m pylibftdi.examples.list_devices
+RFXCOM:RFXtrx433:03VHG0NE
+FTDI:FT245R USB FIFO:A6VV5PHY
+}}}
+
 = Errors =
 
 == Error: libftdi library not found ==
