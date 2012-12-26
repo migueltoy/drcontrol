@@ -18,7 +18,31 @@ There are two libraries that are needed to interface the relay board.
 
 = Install =
 
+To install the additional software I have used [http://www.macports.org/ MacPort], but I guess alternatives like [http://mxcl.github.com/homebrew/ HomeBrew] could be used as well.
+
+Install libFTDI
+
+{{{
+# sudo port install libftdi
+}}}
+
+To install the pylibftdi the PIP is used.
+
+{{{
+# sudo easy_install pip
+# sudo pip install pylibftdi
+}}}
+
 = Errors =
+
+== Error: libftdi library not found ==
+
+MacPort will install the library to the directory /opt/local/lib/ for some reason the Python will not look here for the library. Therefor the system variable DYLD_LIBRARY_PATH need to point to this library path for the scripts to work properly.
+
+{{{
+echo $DYLD_LIBRARY_PATH 
+export DYLD_LIBRARY_PATH=/opt/local/lib/
+}}}
 
 == Error: device not found (-3) ==
 
