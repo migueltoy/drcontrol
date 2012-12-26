@@ -54,7 +54,7 @@ FTDI:FT245R USB FIFO:A6VV5PHY
 
 == Error: libftdi library not found ==
 
-[http://www.macports.org/ MacPort} will install the library to the directory /opt/local/lib/ for some reason the Python will not look here for the library. Therefor the system variable DYLD_LIBRARY_PATH need to point to this library path for the scripts to work properly.
+[http://www.macports.org/ MacPort] will install the library to the directory /opt/local/lib/ for some reason the Python will not look here for the library. Therefor the system variable DYLD_LIBRARY_PATH need to point to this library path for the scripts to work properly.
 
 {{{
 echo $DYLD_LIBRARY_PATH 
