@@ -17,3 +17,15 @@ There are two libraries that are needed to interface the relay board.
   * PyLibFTDI
 
 = Install =
+
+= Errors =
+
+== Error: pylibftdi._base.FtdiError: device not found (-3) ==
+
+Unloading the FTDI kernel extension seems to solve this.
+
+{{{
+# sudo kextunload /System/Library/Extensions/FTDIUSBSerialDriver.kext
+}}}
+
+How to reload the FTDI kernel 
