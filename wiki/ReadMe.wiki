@@ -1,0 +1,84 @@
+#summary Instructions for DRControl
+==DESCRIPTION==
+
+DRControl is Python script that controls the USB Relay board from Denkovi [www.denkovi.com].
+
+==REQUIREMENTS==
+
+  * Python 2.6+
+  * Tested on Raspberry Pi with Python 2.6
+  * Tested on Mac OSX 10.8.2 with Python 2.7.2
+  * Tested on Ubuntu 12.04 Desktop (via VMWare)
+  * Denkovi 4 USB Relay Board
+
+==DRCONTROL.PY==
+
+Options;
+
+||-d||Device||
+||-r||Relay number||
+||-s||Relay state||
+||-l||List all available FTDI devices||
+||-v||Verbose, print status and information on stdout||
+
+=== Device (-d) ===
+----
+{{{
+option -d <device serial number>
+}}}
+
+=== Relay (-r) ===
+----
+{{{
+option -r <1..4>
+}}}
+
+=== Relay State (-s) ===
+----
+{{{
+option -o <on|off>
+}}}
+
+Options: on or off
+
+=== List devices (-l) ===
+----
+{{{
+option -l
+}}}
+
+List all FTDI devices on the system
+
+=== Verbose (-v) ===
+----
+{{{
+option -v
+}}}
+
+----
+==EXAMPLES==
+
+n/a
+
+----
+==INFO==
+
+The USB 4 relay board is a product from [http://denkovi.com/ Denkovi Assembly Electronics ltd]
+
+----
+==COPYRIGHT==
+
+Copyright (C) 2012 Sebastian Sjoholm
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
