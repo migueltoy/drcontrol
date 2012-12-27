@@ -69,7 +69,7 @@ Get sources and install pylibftdi
 If you have installed the pylibftdi with PIP and now want to upgrade it to latest "pre" release version from the sources, then first uninstall existing with "pip uninstall"
 
 {{{
-# sudo pip uninstall pulibftdi
+# sudo pip uninstall pylibftdi
 }}}
 
 And after that use the "alternative install" procedure above to get the latest pylibftdi.
