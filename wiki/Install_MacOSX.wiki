@@ -20,7 +20,7 @@ There are two libraries that are needed to interface the relay board.
   * Python-FTDI 
   * PyLibFTDI
 
-= Install =
+== Library install ==
 
 To install the additional software I have used [http://www.macports.org/ MacPort], but I guess alternatives like [http://mxcl.github.com/homebrew/ HomeBrew] could be used as well.
 
@@ -37,7 +37,7 @@ To install the pylibftdi with PIP, if you have PIP already installed you can ski
 # sudo pip install pylibftdi
 }}}
 
-= Test= 
+== Library Test == 
 
 To test that the python software is properly installed following command should give you a printout.
 
@@ -54,9 +54,9 @@ RFXCOM:RFXtrx433:03VHG0NE
 FTDI:FT245R USB FIFO:A6VV5PHY
 }}}
 
-= Errors =
+== Errors ==
 
-== Error: libftdi library not found ==
+=== Error: libftdi library not found ===
 
 [http://www.macports.org/ MacPort] will install the library to the directory /opt/local/lib/ for some reason the Python will not look here for the library. Therefor the system variable DYLD_LIBRARY_PATH need to point to this library path for the scripts to work properly.
 
@@ -65,7 +65,7 @@ echo $DYLD_LIBRARY_PATH
 export DYLD_LIBRARY_PATH=/opt/local/lib/
 }}}
 
-== Error: device not found (-3) ==
+=== Error: device not found (-3) ===
 
 If following error occur when the device is accessed
 
@@ -83,4 +83,21 @@ How to reload the FTDI kernel
 
 {{{
 # sudo kextload /System/Library/Extensions/FTDIUSBSerialDriver.kext
+}}}
+
+= DRControl install =
+
+The DRControl does not need that much installation, as it is only one python file that can be executed from user chosen directory. It can be downloaded from download page here, or then fetched directly from the SVN repository.
+
+Download from download page
+
+{{{
+# wget http://drcontrol.googlecode.com/files/drcontrol.0.1.zip
+# unzip drcontrol.0.1.zip
+}}}
+
+Or from the SVN directly (Note, that this version might not ve fully tested or working)
+
+{{{
+# wget http://drcontrol.googlecode.com/svn/trunk/drcontrol.py
 }}}
