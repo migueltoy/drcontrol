@@ -1,0 +1,6 @@
+#summary DRControl version history
+= Version History =
+
+== v0.1 (27-DEC-2012) ==
+
+ * First release
