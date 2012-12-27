@@ -17,7 +17,7 @@ There are two libraries that are needed to interface the relay board.
   * Python-FTDI
   * PyLibFTDI, at least version 0.11pre for full functionality
 
-= Install =
+== Library install ==
 
 Please note, that as of 27-DEC-2012, the pylibftdi that comes with the PIP install will not be the 0.11pre version, and therefor the alternative install procedure (below) should be used.
 
@@ -39,7 +39,7 @@ If you don't have PIP installed you can install it easily by following command
 # sudo apt-get install python-pip
 }}}
 
-= Alternative install =
+== Alternative library install ==
 
 This installation will get the latest pylibftdi directly from the sources. You will need Mercurial for this.
 
@@ -65,7 +65,7 @@ Get sources and install latest pylibftdi from sources
 # rm -rf /tmp/pylibftdi
 }}}
 
-= Upgrade =
+== pylibftdi Upgrade ==
 
 If you have installed the pylibftdi with PIP and now want to upgrade it to latest "pre" release version from the sources, then first uninstall existing with "pip uninstall"
 
@@ -75,7 +75,7 @@ If you have installed the pylibftdi with PIP and now want to upgrade it to lates
 
 And after that use the "alternative install" procedure above to get the latest pylibftdi.
 
-= Test =
+== Library Test ==
 
 If you have the relay board connected, then you can run a quick test by entering following command
 
@@ -92,3 +92,20 @@ root@raspberrypi:~#
 }}}
 
 Note that this command will list all FTDI devices, so if you have more of them, then it will be listed as well.
+
+= DRControl install =
+
+The DRControl does not need that much installation, as it is only one python file that can be executed from user chosen directory. It can be downloaded from download page here, or then fetched directly from the SVN repository.
+
+Download from download page
+
+{{{
+# wget http://drcontrol.googlecode.com/files/drcontrol.0.1.zip
+# unzip drcontrol.0.1.zip
+}}}
+
+Or from the SVN directly (Note, that this version might not ve fully tested or working)
+
+{{{
+# wget http://drcontrol.googlecode.com/svn/trunk/drcontrol.py
+}}}
