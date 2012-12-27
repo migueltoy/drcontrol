@@ -13,6 +13,8 @@ Instructions how to install the needed libraries and test DRControl utility to c
 
   * It seems that only way to get the library to communicate with the device is to unload the FTDI kernel extension, it can cause issues if the user have other FTDI devices connected to the system that uses this extension.
 
+  * Currently (27-DEC-2012), The pylibftdi that is installed from the PIP repository is not version 0.11pre which is needed for full functionality. Please see Install_RaspberryPi page how to fetch it from developer repository.
+
 = Python Libraries =
 
 There are two libraries that are needed to interface the relay board.
