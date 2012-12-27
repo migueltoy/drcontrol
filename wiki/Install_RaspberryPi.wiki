@@ -22,19 +22,46 @@ There are two libraries that are needed to interface the relay board.
 Install Python-FTDI library
 
 {{{
-# apt-get install python-ftdi
+# sudo apt-get install python-ftdi
 }}}
 
 Install the FTDI wrapper PyLibFTDI usinf PIP.
 
 {{{
-# pip install pylibftdi
+# sudo pip install pylibftdi
 }}}
 
 If you don't have PIP installed you can install it easily by following command
 
 {{{
-# apt-get install python-pip
+# sudo apt-get install python-pip
+}}}
+
+= Alternative install =
+
+This installation will get the latest pylibftdi directly from the sources. You will need Mercurial for this.
+
+Install Python-FTDI libraru
+
+{{{
+# sudo apt-get install python-ftdi
+}}}
+
+If you don't have Mercurial installed, then install it as following
+
+{{{
+# sudo apt-get install mercurial
+}}}
+
+Get sources and install pylibftdi
+
+{{{
+# cd /tmp
+# sudo hg clone https://bitbucket.org/codedstructure/pylibftdi pylibftdi
+# cd pylibftdi
+# sudo setup.py install
+# cd /tmp
+# rm -rf pylibftdi
 }}}
 
 = Test =
