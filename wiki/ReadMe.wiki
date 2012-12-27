@@ -9,7 +9,7 @@ DRControl is Python script that controls the USB Relay board from Denkovi [www.d
   * Tested on Raspberry Pi with Python 2.6
   * Tested on Mac OSX 10.8.2 with Python 2.7.2
   * Tested on Ubuntu 12.04 Desktop (via VMWare)
-  * Denkovi 4 USB Relay Board
+  * Denkovi 4 USB Relay Board, product code DAE-CB/Ro4-USB
 
 ==DRCONTROL.PY==
 
