@@ -57,7 +57,9 @@ Get sources and install latest pylibftdi from sources
 
 {{{
 # sudo hg clone https://bitbucket.org/codedstructure/pylibftdi /tmp/pylibftdi
+# cd /tmp/pylibftdi
 # sudo /tmp/pylibftdi/setup.py install
+# cd /tmp
 # rm -rf /tmp/pylibftdi
 }}}
 
