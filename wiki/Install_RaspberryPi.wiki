@@ -56,10 +56,9 @@ If you don't have Mercurial installed, then install it as following
 Get sources and install latest pylibftdi from sources
 
 {{{
-# cd /tmp
-# sudo hg clone https://bitbucket.org/codedstructure/pylibftdi pylibftdi
+# sudo hg clone https://bitbucket.org/codedstructure/pylibftdi /tmp/pylibftdi
 # sudo /tmp/pylibftdi/setup.py install
-# rm -rf pylibftdi
+# rm -rf /tmp/pylibftdi
 }}}
 
 = Upgrade =
