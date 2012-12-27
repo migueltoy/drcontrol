@@ -41,7 +41,7 @@ If you don't have PIP installed you can install it easily by following command
 
 This installation will get the latest pylibftdi directly from the sources. You will need Mercurial for this.
 
-Install Python-FTDI libraru
+Install Python-FTDI library
 
 {{{
 # sudo apt-get install python-ftdi
@@ -63,6 +63,16 @@ Get sources and install pylibftdi
 # cd /tmp
 # rm -rf pylibftdi
 }}}
+
+= Upgrade =
+
+If you have installed the pylibftdi with PIP and now want to upgrade it to latest "pre" release version from the sources, then first uninstall existing with "pip uninstall"
+
+{{{
+# sudo pip uninstall pulibftdi
+}}}
+
+And after that use the "alternative install" procedure above to get the latest pylibftdi.
 
 = Test =
 
