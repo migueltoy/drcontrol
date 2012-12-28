@@ -128,7 +128,7 @@ def set_relay():
                 print "Current state: " + bb.port
 
     except Exception, err:
-        print "Error: Problem with device, or device not exists: " + err
+        print "Error: Problem with device, or device not exists: " + str(err)
         sys.exit(1)
 
 def check():
