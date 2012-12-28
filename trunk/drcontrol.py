@@ -110,8 +110,7 @@ def set_relay():
 
     if cmdarg.verbose:
         print "Device: " + cmdarg.device
-        print "Relay: " + cmdarg.relay + " (0x" + relay.address[cmdarg.relay] + ")"
-        print "State: " + cmdarg.state
+        print "Command: Set relay " + cmdarg.relay + " (0x" + relay.address[cmdarg.relay] + ") to " + cmdarg.state
 
     try:
         with BitBangDevice(cmdarg.device) as bb:
