@@ -117,7 +117,7 @@ def set_relay():
         with BitBangDevice(cmdarg.device) as bb:
 
             if cmdarg.verbose:
-                print "Current state: " + bb.port
+                print "Current state: " + str(bb.port)
 
             if cmdarg.state == "on":
                 bb.port |= int(relay.address[cmdarg.relay], 16)
@@ -125,7 +125,7 @@ def set_relay():
                 bb.port &= ~int(relay.address[cmdarg.relay], 16)
 
             if cmdarg.verbose:
-                print "Current state: " + bb.port
+                print "Current state: " + str(bb.port)
 
     except Exception, err:
         print "Error: Problem with device, or device not exists: " + str(err)
