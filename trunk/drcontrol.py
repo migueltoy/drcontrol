@@ -127,8 +127,8 @@ def set_relay():
             if cmdarg.verbose:
                 print "Current state: " + bb.port
 
-    except Exception:
-        print "Error: Problem with device, or device not exists"
+    except Exception, err:
+        print "Error: Problem with device, or device not exists: " + err
         sys.exit(1)
 
 def check():
