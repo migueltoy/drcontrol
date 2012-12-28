@@ -77,6 +77,10 @@ class relay_data(dict):
             "2":"8",
             "3":"20",
             "4":"80"
+            "5":"1",
+            "6":"4",
+            "7":"10",
+            "8":"40"
             }
 
     def __getitem__(self, key): return self[key]
