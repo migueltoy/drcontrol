@@ -154,7 +154,7 @@ if __name__ == '__main__':
     parser = OptionParser()
     parser.add_option("-d", "--device", action="store", type="string", dest="device", help="The device serial, example A6VV5PHY")
     parser.add_option("-l", "--list", action="store_true", dest="list", default=False, help="List all devices")
-    parser.add_option("-r", "--relay", action="store", type="string", dest="relay", help="Relay to command by number")
+    parser.add_option("-r", "--relay", action="store", type="string", dest="relay", help="Relay to command by number: 1...8")
     parser.add_option("-s", "--state", action="store", type="string", dest="state", help="State: on or off")
     parser.add_option("-v", "--verbose", action="store_true", dest="verbose", default=False, help="Verbose, print all info on screen")
 
