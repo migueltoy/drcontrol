@@ -163,6 +163,8 @@ if __name__ == '__main__':
     if options.verbose:
         cmdarg.verbose = options.verbose
         print app.name + " " + app.version
+    else:
+        cmdarg.verbose = False
 
     if options.list:
         list_devices()
