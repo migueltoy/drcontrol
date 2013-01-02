@@ -27,19 +27,53 @@ Options;
 option -d <device serial number>
 }}}
 
+Address the relay board with the serial number of the FTDI device, this can be listed with the "-l" (list) switch.
+
+Example below is two devices listed, the "FT245R USB FIFO" is the relay board (4 x USB Board) which is then used the serial "A6VV5PHY" to show the state of the relay 1.
+
+{{{
+$ ./drcontrol.py -l
+Vendor		Product			Serial
+RFXCOM		RFXtrx433		03VHG0NE
+FTDI		FT245R USB FIFO		A6VV5PHY
+$ ./drcontrol.py -d A6VV5PHY -r 1 -c state
+ON
+$
+}}}
+
 === Relay (-r) ===
 ----
 {{{
-option -r <1..4>
+option -r <1..8>
 }}}
 
-=== Relay State (-s) ===
+Needed in to address which relay is going to be commanded.
+
+=== Relay Command (-c) ===
 ----
 {{{
-option -o <on|off>
+option -c <on|off|state>
 }}}
 
-Options: on or off
+Options: on, off, state
+
+ON = To set the relay ON
+OFF = To set the relay OFF
+STATE = To show the current state of the relay
+
+Examples;
+
+{{{
+$ ./drcontrol.py -d A6VV5PHY -r 1 -c state
+ON
+$ ./drcontrol.py -d A6VV5PHY -r 1 -c off
+$ ./drcontrol.py -d A6VV5PHY -r 1 -c state
+OFF
+$ ./drcontrol.py -d A6VV5PHY -r 1 -c on
+$ ./drcontrol.py -d A6VV5PHY -r 1 -c state
+ON
+$
+}}}
 
 === List devices (-l) ===
 ----
@@ -47,7 +81,17 @@ Options: on or off
 option -l
 }}}
 
-List all FTDI devices on the system
+List all FTDI devices on the system.
+
+Example;
+
+{{{
+$ ./drcontrol.py -l
+Vendor		Product			Serial
+RFXCOM		RFXtrx433		03VHG0NE
+FTDI		FT245R USB FIFO		A6VV5PHY
+$
+}}}
 
 === Verbose (-v) ===
 ----
@@ -55,10 +99,28 @@ List all FTDI devices on the system
 option -v
 }}}
 
-----
-==EXAMPLES==
+Give verbose printouts of all commands.
 
-n/a
+Example;
+
+{{{
+$ ./drcontrol.py -d A6VV5PHY -r 1 -c state -v
+DRControl 0.11
+Device:		A6VV5PHY
+Send command:	Relay 1 (0x2) to STATE
+Relay 1 state:	ON (2)
+$ ./drcontrol.py -d A6VV5PHY -r 1 -c off -v
+DRControl 0.11
+Device:		A6VV5PHY
+Send command:	Relay 1 (0x2) to OFF
+Relay 1 to OFF
+$ ./drcontrol.py -d A6VV5PHY -r 1 -c state -v
+DRControl 0.11
+Device:		A6VV5PHY
+Send command:	Relay 1 (0x2) to STATE
+Relay 1 state:	OFF (0)
+$
+}}}
 
 ----
 ==INFO==
