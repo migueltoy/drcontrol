@@ -55,6 +55,18 @@ root@raspberrypi:~#
 
 Note that this command will list all FTDI devices, so if you have more of them, then it will be listed as well.
 
+== Errrors ==
+
+Do you only get following printout when you list the devices;
+
+{{{
+pi@raspberrypi /opt/drcontrol $ python -m pylibftdi.examples.list_devices
+::
+pi@raspberrypi /opt/drcontrol $
+}}}
+
+Then the normal user (if you are not as root) does not have access to the device, to give access to the device you need to add UDEV rules. Ben Bass has a great instructions regarding this here: [https://pylibftdi.readthedocs.org/en/latest/installation.html https://pylibftdi.readthedocs.org/en/latest/installation.html]
+
 = DRControl install =
 
 The DRControl does not need that much installation, as it is only one python file that can be executed from user chosen directory. It can be downloaded from download page here, or then fetched directly from the SVN repository.
