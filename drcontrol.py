@@ -144,9 +144,9 @@ def set_relay():
 
     try:
         with BitBangDevice(cmdarg.device) as bb:
-
+			
             # Action towards specific relay
-            if cmdarg.relay >= 1 and cmdarg.relay <= 8:
+            if int(cmdarg.relay) >= 1 and int(cmdarg.relay) <= 8:
 
                 # Turn relay ON
                 if cmdarg.command == "on":
