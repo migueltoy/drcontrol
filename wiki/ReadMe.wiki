@@ -44,10 +44,29 @@ $
 === Relay (-r) ===
 ----
 {{{
-option -r <1..8>
+option -r <1..8|all>
 }}}
 
 Needed in to address which relay is going to be commanded.
+
+"ALL" can be used to send the command to all relays. Command is not case sensitive.
+
+Example;
+
+{{{
+$ ./drcontrol.py -d A6VV5PHY -r ALL -c state -v
+DRControl 0.12
+Device:		A6VV5PHY
+Send command:	Relay all (0xFF) to STATE
+Relay 1 state:	ON (2)
+Relay 2 state:	ON (8)
+Relay 3 state:	ON (32)
+Relay 4 state:	ON (128)
+Relay 5 state:	ON (4)
+Relay 6 state:	ON (16)
+Relay 7 state:	ON (64)
+$
+}}}
 
 === Relay Command (-c) ===
 ----
@@ -58,8 +77,12 @@ option -c <on|off|state>
 Options: on, off, state
 
 ON = To set the relay ON
+
 OFF = To set the relay OFF
+
 STATE = To show the current state of the relay
+
+Command is not case sensitive
 
 Examples;
 
