@@ -11,7 +11,7 @@
 == v0.11 (2-JAN-2013) ==
 
  * Pylibftdi library check
- * Relay state commands are now on, off and state
+ * Relay commands (-c switch) are now on, off and state
  * Added support for 8 x USB Board (not available for test)
  * Tested with pylibftdi version 0.11
 
