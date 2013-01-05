@@ -3,8 +3,8 @@
 
 == v0.12c (4-JAN-2013) ==
 
- * fixes a bug with the "ALL" option (0.12c)
- * fixes a critical bug with checking the correct relay number (0.12b)
+ * Fixes a bug with the "ALL" option (0.12c)
+ * Fixes a critical bug with checking the correct relay number (0.12b)
  * Fixes to 8 USB Relay Board
  * All relays can be adressed with "ALL" for ON, OFF and STATE
 
