@@ -146,33 +146,35 @@ def set_relay():
         with BitBangDevice(cmdarg.device) as bb:
 			
             # Action towards specific relay
-            if int(cmdarg.relay) >= 1 and int(cmdarg.relay) <= 8:
+            if cmdarg.relay.isdigit():
+				
+                if int(cmdarg.relay) >= 1 and int(cmdarg.relay) <= 8:
 
-                # Turn relay ON
-                if cmdarg.command == "on":
-                    if cmdarg.verbose:
-                        print "Relay " + str(cmdarg.relay) + " to ON"
-                    bb.port |= int(relay.address[cmdarg.relay], 16)
-
-                # Turn relay OFF
-                elif cmdarg.command == "off":
-                    if cmdarg.verbose:
-                        print "Relay "  + str(cmdarg.relay) + " to OFF"
-                    bb.port &= ~int(relay.address[cmdarg.relay], 16)
-
-                # Print relay status
-                elif cmdarg.command == "state":
-                    state = get_relay_state( bb.port, cmdarg.relay )
-                    if state == 0:
+                    # Turn relay ON
+                    if cmdarg.command == "on":
                         if cmdarg.verbose:
-                            print "Relay " + cmdarg.relay + " state:\tOFF (" + str(state) + ")"
-                        else:
-                            print "OFF"
-                    else:
+                            print "Relay " + str(cmdarg.relay) + " to ON"
+                        bb.port |= int(relay.address[cmdarg.relay], 16)
+
+                    # Turn relay OFF
+                    elif cmdarg.command == "off":
                         if cmdarg.verbose:
-                            print "Relay " + cmdarg.relay + " state:\tON (" + str(state) + ")"
+                            print "Relay "  + str(cmdarg.relay) + " to OFF"
+                        bb.port &= ~int(relay.address[cmdarg.relay], 16)
+
+                    # Print relay status
+                    elif cmdarg.command == "state":
+                        state = get_relay_state( bb.port, cmdarg.relay )
+                        if state == 0:
+                            if cmdarg.verbose:
+                                print "Relay " + cmdarg.relay + " state:\tOFF (" + str(state) + ")"
+                            else:
+                                print "OFF"
                         else:
-                            print "ON"
+                            if cmdarg.verbose:
+                                print "Relay " + cmdarg.relay + " state:\tON (" + str(state) + ")"
+                            else:
+                                print "ON"
 
             # Action towards all relays
             elif cmdarg.relay == "all":
