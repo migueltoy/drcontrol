@@ -74,8 +74,8 @@ The DRControl does not need that much installation, as it is only one python fil
 Download from download page
 
 {{{
-# wget http://drcontrol.googlecode.com/files/drcontrol.0.11.zip
-# unzip drcontrol.0.11.zip
+# wget http://drcontrol.googlecode.com/files/drcontrol.0.12c.zip
+# unzip drcontrol.0.12c.zip
 }}}
 
 Or from the SVN directly (Note, that this version might not ve fully tested or working)
