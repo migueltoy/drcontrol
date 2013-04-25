@@ -78,7 +78,7 @@ Download from download page
 # unzip drcontrol.0.12c.zip
 }}}
 
-Or from the SVN directly (Note, that this version might not ve fully tested or working)
+Or from the SVN directly (Note, that this version might not be fully tested or working)
 
 {{{
 # wget http://drcontrol.googlecode.com/svn/trunk/drcontrol.py
