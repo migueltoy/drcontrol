@@ -33,10 +33,10 @@ Install the FTDI wrapper PyLibFTDI usinf PIP.
 
 == Library Test ==
 
-If you have the relay board connected, then you can run a quick test by entering following command
+If you have the relay board connected, then you can run a quick test by entering following command. Note, when you run this after installation and under normal user you might get a error instead of printout.
 
 {{{
-# sudo python -m pylibftdi.examples.list_devices
+# python -m pylibftdi.examples.list_devices
 }}}
 
 Example printout
@@ -49,7 +49,7 @@ pi@raspberrypi:~#
 
 Note that this command will list all FTDI devices, so if you have more of them, then it will be listed as well.
 
-== Errrors ==
+== Errors ==
 
 Do you only get following printout when you list the devices;
 
@@ -57,6 +57,33 @@ Do you only get following printout when you list the devices;
 pi@raspberrypi /opt/drcontrol $ python -m pylibftdi.examples.list_devices
 ::
 pi@raspberrypi /opt/drcontrol $
+}}}
+
+Or if you get Python exception like;
+
+{{{
+pi@raspberrypi ~ $ python -m pylibftdi.examples.list_devices
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/runpy.py", line 162, in _run_module_as_main
+    "__main__", fname, loader, pkg_name)
+  File "/usr/lib/python2.7/runpy.py", line 72, in _run_code
+    exec code in run_globals
+  File "/usr/local/lib/python2.7/dist-packages/pylibftdi/examples/list_devices.py", line 42, in <module>
+    for device in get_ftdi_device_list():
+  File "/usr/local/lib/python2.7/dist-packages/pylibftdi/examples/list_devices.py", line 33, in get_ftdi_device_list
+    for device in Driver().list_devices():
+  File "/usr/local/lib/python2.7/dist-packages/pylibftdi/driver.py", line 158, in list_devices
+    raise FtdiError(self.fdll.ftdi_get_error_string(byref(ctx)))
+pylibftdi._base.FtdiError: error sending control message: Operation not permitted
+pi@raspberrypi ~ $
+}}}
+
+You can try to run with sudo, and if that works, then you know it is a permission thing.
+
+{{{
+pi@raspberrypi ~ $ sudo python -m pylibftdi.examples.list_devices
+FTDI:FT245R USB FIFO:A6VV5PHY
+pi@raspberrypi ~ $
 }}}
 
 Then the normal user (if you are not as root) does not have access to the device, to give access to the device you need to add UDEV rules. Ben Bass has a great instructions regarding this here: [https://pylibftdi.readthedocs.org/en/latest/installation.html https://pylibftdi.readthedocs.org/en/latest/installation.html]
