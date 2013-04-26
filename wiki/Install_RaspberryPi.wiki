@@ -31,12 +31,6 @@ Install the FTDI wrapper PyLibFTDI usinf PIP.
 # sudo pip install pylibftdi
 }}}
 
-If you don't have PIP installed you can install it easily by following command
-
-{{{
-# sudo apt-get install python-pip
-}}}
-
 == Library Test ==
 
 If you have the relay board connected, then you can run a quick test by entering following command
