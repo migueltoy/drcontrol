@@ -88,7 +88,7 @@ pi@raspberrypi ~ $
 
 Then the normal user (if you are not as root) does not have access to the device, to give access to the device you need to add UDEV rules. Ben Bass has a great instructions regarding this here: [https://pylibftdi.readthedocs.org/en/latest/installation.html https://pylibftdi.readthedocs.org/en/latest/installation.html]
 
-Here is in short what needs to be done. Note, that I have changed the MODE to 0666, this gives write permission to everyone, this is needed if the script is to be executed via PHP/Apache. Normally (from Ben Bass page this is 0660).
+Here is in short what needs to be done. Note, that I have changed the MODE to 0666, this gives write permission to everyone, this is needed if the script is to be executed via PHP/Apache. At Ben Bass page this is 0660.
 
 {{{
 pi@raspberrypi ~ $ sudo nano /etc/udev/rules.d/99-libftdi.rules
