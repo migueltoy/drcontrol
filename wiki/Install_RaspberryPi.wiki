@@ -36,7 +36,7 @@ Install the FTDI wrapper PyLibFTDI usinf PIP.
 If you have the relay board connected, then you can run a quick test by entering following command
 
 {{{
-# python -m pylibftdi.examples.list_devices
+# sudo python -m pylibftdi.examples.list_devices
 }}}
 
 Example printout
