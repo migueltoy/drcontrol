@@ -88,6 +88,28 @@ pi@raspberrypi ~ $
 
 Then the normal user (if you are not as root) does not have access to the device, to give access to the device you need to add UDEV rules. Ben Bass has a great instructions regarding this here: [https://pylibftdi.readthedocs.org/en/latest/installation.html https://pylibftdi.readthedocs.org/en/latest/installation.html]
 
+Here is in short what needs to be done;
+
+{{{
+pi@raspberrypi ~ $ sudo nano /etc/udev/rules.d/99-libftdi.rules
+}}}
+
+Add following line to the file and save.
+
+{{{
+SUBSYSTEMS=="usb", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6001", GROUP="dialout", MODE="0660"
+}}}
+
+Check that the file is OK
+
+{{{
+pi@raspberrypi ~ $ cat /etc/udev/rules.d/99-libftdi.rules
+SUBSYSTEMS=="usb", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6001", GROUP="dialout", MODE="0660"
+pi@raspberrypi ~ $
+}}}
+
+Do a reboot.
+
 = DRControl install =
 
 The DRControl does not need that much installation, as it is only one python file that can be executed from user chosen directory. It can be downloaded from download page here, or then fetched directly from the SVN repository.
