@@ -117,8 +117,30 @@ The DRControl does not need that much installation, as it is only one python fil
 Download from download page
 
 {{{
+# mkdir drcontrol
+# cd drcontrol
 # wget http://drcontrol.googlecode.com/files/drcontrol.0.12c.zip
 # unzip drcontrol.0.12c.zip
+}}}
+
+Example of printing out relay device, and status on all relays
+
+{{{
+pi@raspberrypi ~/drcontrol $ ./drcontrol.py -l
+Vendor		Product			Serial
+FTDI		FT245R USB FIFO		A6VV5PHY
+pi@raspberrypi ~/drcontrol $ ./drcontrol.py -d A6VV5PHY -c state -r all -v
+DRControl 0.12
+Device:		A6VV5PHY
+Send command:	Relay all (0xFF) to STATE
+Relay 1 state:	OFF (0)
+Relay 2 state:	OFF (0)
+Relay 3 state:	OFF (0)
+Relay 4 state:	OFF (0)
+Relay 5 state:	OFF (0)
+Relay 6 state:	OFF (0)
+Relay 7 state:	OFF (0)
+pi@raspberrypi ~/drcontrol $
 }}}
 
 Or from the SVN directly (Note, that this version might not be fully tested or working)
