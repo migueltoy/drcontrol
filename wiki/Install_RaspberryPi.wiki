@@ -19,10 +19,10 @@ There are two libraries that are needed to interface the relay board.
 
 == Library install ==
 
-Install Python-FTDI library
+Install Python-FTDI library, and Python-pip package is needed to install the pyLipFTDI
 
 {{{
-# sudo apt-get install python-ftdi
+# sudo apt-get install python-ftdi python-pip
 }}}
 
 Install the FTDI wrapper PyLibFTDI usinf PIP.
